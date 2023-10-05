@@ -2,20 +2,23 @@ const express = require("express");
 const app = express();
 const PORT = 5345;
 
+
+
 app.get("/home", (req, res) => {
-    console.log("You are connected!");
-    res.send(__dirname + "/views/home.html");
+    res.sendFile(__dirname + "/views/home.html");
 });
 
 
-app.get("/about", (req, res) => {
-    console.log("You are connected!");
-    res.send(__dirname + "/views/About.html");
+app.get("/About", (req, res) => {
+    res.sendFile(__dirname + "/views/About.html");
 });
 
-app.get("/works", (req, res) => {
-    console.log("You are connected!");
-    res.send(__dirname + "/views/works.html");
+app.get("/Works", (req, res) => {
+    res.sendFile(__dirname + "/views/Works.html");
+});
+
+app.get("/gallery", (req, res) => {
+    res.sendFile(__dirname + "/views/gallery.html");
 });
 
 
