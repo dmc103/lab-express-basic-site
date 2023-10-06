@@ -3,10 +3,6 @@ const app = express();
 const PORT = 5250;
 
 
-app.arguments(express.static('public'));
-
-
-
 app.get("/home", (req, res) => {
     res.sendFile(__dirname + "/views/home.html");
 });
